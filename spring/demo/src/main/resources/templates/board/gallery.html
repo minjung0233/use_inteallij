@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<body>
+<section class="container" layout:fragment="content">
+
+    <style>
+        .img-container {height: 200px;overflow: hidden;border-bottom: 1px solid #ccc}
+        .no-img {line-height: 200px;text-align: center}
+    </style>
+
+    <h2 class="visually-hidden">게시물 목록</h2>
+    <form action="/board/delete" method="post" id="listForm" class="row">
+        <th:block th:each="file : ${uploadFileVO}">
+            <div class="col-md-4 mb-5">
+                <div class="card">
+                    <th:block th:if="${file.contentType.toString().contains('image')}">
+                        <div class="img-container">
+                            <img th:src="@{|/board/file/${file.id}|}" alt="" class="card-img-top">
+                        </div>
+                    </th:block>
+                    <th:block th:unless="${file.contentType.toString().contains('image')}">
+                        <div class="img-container"><p class="no-img">이미지가 없습니다.</p></div>
+                    </th:block>
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${result.title}"></h5>
+                        <p class="card-text">작성일 : <span th:text="${#temporals.format(result.regDate, 'yyyy-MM-dd HH:mm')}"></span></p>
+                        <p class="card-text">조회수 : <span th:text="${result.count}"></span></p>
+                        <p class="card-text">작성자 : <span th:text="${result.regId}"></span></p>
+                        <a th:href="@{/board/list}" class="btn btn-primary">게시물 보기</a>
+                    </div>
+                </div>
+            </div>
+        </th:block>
+        <div class="d-flex justify-content-between mb-3">
+            <button type="button" id="btnDel" class="btn btn-danger">삭제</button>
+            <a th:href="@{/board/write}" class="btn btn-secondary">글쓰기</a>
+        </div>
+    </form>
+    <script>
+        $('#btnDel').click(function(){
+            $('#listForm').submit();
+        });
+    </script>
+</section>
+</body>
+</html>

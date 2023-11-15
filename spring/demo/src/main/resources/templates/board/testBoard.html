@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>testBoard</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form layout:fragment="content">
+    첫 번째 숫자<br><input type="number" id="firstNum"><br>
+    두 번째 숫자<br><input type="number" id="secondNum"><br>
+    연산자<br>
+    <select id="calculate">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br>결과<br><input th:value="${result}" readonly><br>
+    <input type="submit" value="계산하기">
+</form>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function hello(){
+            var first = document.getElementById("firstNum").value
+            var second = document.getElementById("secondNum").value
+            var calculate = document.getElementById("calculate").value
+
+            first = Number(first)
+            second = Number(second)
+            switch (calculate) {
+                case "+":
+                    var re = first+second
+                    document.getElementById("result").innerHTML=`결과<input type="number" value=`+re+` readonly><br>`;
+                break;
+                case "-":
+                    var re = first-second
+                    document.getElementById("result").innerHTML=`결과<input type="number" value=`+re+` readonly><br>`;
+                break;
+                case "*":
+                    var re = first*second
+                    document.getElementById("result").innerHTML=`결과<input type="number" value=`+re+` readonly><br>`;
+                    break;
+                case "/":
+                    if(second !== 0){
+                        var re = first/second
+                        document.getElementById("result").innerHTML=`결과<input type="number" value=`+re+` readonly><br>`;
+                    }
+                default:
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+첫 번째 숫자<input type="number" id="firstNum"><br>
+두 번쨰 숫자<input type="number" id="secondNum"><br>
+<form>
+    연산자
+    <select id="calculate">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br>
+
+    <button id="button" onclick="hello()">계산하기</button>
+</form>
+<div id="result"></div>
+</body>
+</html>

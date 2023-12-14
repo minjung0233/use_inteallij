@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="addEditViewModel"
+            type="com.example.smartteamdailyapplication.viewmodel.AddEditViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddEditTaskActivity"
+        android:id="@+id/add_edit_layout">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp"
+            android:theme="@style/Theme.smartteamdailyapplication.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.smartteamdailyapplication.PopupOverlay" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical|center"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/FilledBoxColor"
+                    android:layout_marginEnd="20dp"
+                    tools:layout_editor_absoluteX="1dp"
+                    tools:layout_editor_absoluteY="115dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtTitleText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="10dp"
+                        android:theme="@style/EditTextThemeOverlay"
+                        android:textColor="@color/white"
+                        android:hint="@string/title"
+                        android:inputType="text"
+                        android:textSize="25sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtViewDate"
+                        android:layout_width="275dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:hint="@string/date"
+                        android:textSize="18sp"
+                        android:textColor="?attr/colorOnPrimary" />
+
+
+                    <ImageButton
+                        android:id="@+id/imgBtnCalendar"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/round_button"
+                        app:srcCompat="@drawable/ic_calender"
+                        android:contentDescription="@string/calender_button_image"
+                        android:onClick="@{(v)->addEditViewModel.onDisplayDatePickerDialogClick()}"
+                        app:tint="?attr/colorOnPrimary" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtViewTime"
+                        android:layout_width="275dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:hint="@string/alarm"
+                        android:textSize="18sp"
+                        android:textColor="?attr/colorOnPrimary" />
+
+
+                    <Button
+                        android:id="@+id/btnCancelAlarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_marginEnd="10dp"
+                        android:text="Cancel alarm"
+                        android:backgroundTint="?attr/colorSecondary" />
+
+                    <ImageButton
+                        android:id="@+id/imgBtnTime"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/round_button"
+                        app:srcCompat="@drawable/ic_clock"
+                        app:tint="?attr/colorOnPrimary"
+                        android:contentDescription="@string/alarm_img_button"
+                        android:onClick="@{(v)->addEditViewModel.onDisplayTimePickerDialogClick()}"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:background="?attr/colorSecondary"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/topLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/textType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radio_btn_type"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="25sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioBtnTask"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="20dp"
+                                android:textColor="?attr/colorOnPrimary"
+                                android:text="@string/radio_btn_task"
+                                android:textSize="20sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioBtnEvent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="10dp"
+                                android:textColor="?attr/colorOnPrimary"
+                                android:text="@string/radio_btn_event"
+                                android:textSize="20sp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutPriority"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txtPriority"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radio_btn_priority"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="25sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupPriority"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <RadioButton
+                                android:id="@+id/radioBtnHigh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="?attr/colorOnPrimary"
+                                android:text="@string/radio_btn_high"
+                                android:textSize="20sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioBtnMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="?attr/colorOnPrimary"
+                                android:text="@string/radio_btn_medium"
+                                android:textSize="20sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioBtnLow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="?attr/colorOnPrimary"
+                                android:text="@string/radio_btn_low"
+                                android:textSize="20sp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtDescription"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="150"
+                    app:helperTextEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtEditDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|start"
+                        android:hint="@string/txt_description"
+                        android:isScrollContainer="true"
+                        android:maxLength="151"
+                        android:maxLines="4"
+                        android:minLines="4"
+                        android:scrollbars="vertical" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

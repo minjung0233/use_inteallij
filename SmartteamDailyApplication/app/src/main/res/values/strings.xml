@@ -1,0 +1,159 @@
+<resources>
+
+    <!--Main Activity-->
+    <string name="app_name">Smart team Daily Application</string>
+
+    <string name="today">Today</string>
+    <string name="tab_day">Day</string>
+    <string name="tab_week">Week</string>
+    <string name="tab_month">Month</string>
+    <string name="tab_year">Year</string>
+
+    <!--Create New Task Activity-->
+    <string name="title_activity_new_task_event">Create a new task</string>
+
+    <string name="title">Title</string>
+    <string name="date">Set date</string>
+    <string name="alarm">Set alarm</string>
+
+    <string name="calender_button_image">Calender Button image</string>
+    <string name="alarm_img_button">Alarm Image Button</string>
+
+    <string name="radio_btn_type">Type</string>
+    <string name="radio_btn_task">Task</string>+
+    <string name="radio_btn_event">Event</string>
+
+    <string name="radio_btn_priority">Priority</string>
+    <string name="radio_btn_low">Low</string>
+    <string name="radio_btn_medium">Medium</string>
+    <string name="radio_btn_high">High</string>
+
+    <string name="txt_description">Description</string>
+
+
+    <!--Progress Activity-->
+    <string name="activity_progress_title">Progress</string>
+
+    <string name="string_progress_day">Day</string>
+    <string name="btn_week">Week</string>
+    <string name="btn_month">Month</string>
+    <string name="btn_year">Year</string>
+
+    <string name="no_tasks_string">No tasks</string>
+    <string name="canceled_tasks">Canceled</string>
+    <string name="completed_tasks">Completed</string>
+    <string name="active_tasks">Active</string>
+
+    <!--Details Activity-->
+    <string name="title_activity_task_details">Details</string>
+    <string name="status_active">Active</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_canceled">Canceled</string>
+
+    <string name="no_alarm">No Alarm Set</string>
+    <string name="set_alarm">Alarm Set For:</string>
+
+    <string name="description_validation">Description is too long</string>
+    <string name="priority_validation">Select a  priority!</string>
+    <string name="title_validation">Field can not be empty!</string>
+    <string name="type_validation">Field can not be empty!</string>
+
+    <string name="alarm_canceled">Alarm is canceled</string>
+
+    <!--Fragment Today-->
+    <string name="list_of_tasks">List of Tasks</string>
+    <string name="list_of_events">List of Events</string>
+    <string name="no_events_string">No events</string>
+
+    <!--Fragment Week-->
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+
+    <string name="no_more">No more</string>
+    <string name="less">Less</string>
+    <string name="more">More</string>
+    <string name="no_tasks">No events or tasks set</string>
+
+    <!--Fragment Month-->
+    <string name="monthlyEvents">Events this month</string>
+    <string name="on"> on </string>
+
+
+
+    <!--Fragment Year-->
+    <string name="jan">JAN</string>
+    <string name="feb">FEB</string>
+    <string name="mar">MAR</string>
+    <string name="apr">APR</string>
+    <string name="may">MAY</string>
+    <string name="june">JUNE</string>
+    <string name="july">JULY</string>
+    <string name="aug">AUG</string>
+    <string name="sep">SEP</string>
+    <string name="oct">OCT</string>
+    <string name="nov">NOV</string>
+    <string name="dec">DEC</string>
+
+
+    <!--Splash Screen Activity-->
+    <string name="background_content_description">Splash Background</string>
+    <string name="author">"Created by Dragana Pavlović Malešić"</string>
+
+
+    <!--Menus-->
+    <string name="action_done">Done</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_progress">Progress</string>
+
+    <!--Settings-->
+    <string name="title_activity_settings">Settings</string>
+
+    <!--Settings Preferences-->
+    <string name="language_title">Language</string>
+    <string name="theme_title">Theme</string>
+    <string name="reminder_title">Daily Reminder</string>
+    <string name="tutorial_title">Tutorial</string>
+    <string name="timer">Time</string>
+
+    <string name="is_set">Activate the reminder</string>
+    <string name="is_disabled">Disable the reminder</string>
+
+    <!--Tutorial Activity-->
+
+    <string name="welcome">Welcome to Planner,\n an app for tracking your tasks</string>
+    <string name="lets_start">Lets start!</string>
+
+    <string name="first_page">This is the list of your daily tasks and events! If you want to create a new one, just press the button on the bottom! </string>
+    <string name="second_page">Upon pressing the button, you can choose to add a task or an event, change the date and set an alarm. You can also set the task\'s priority.</string>
+
+    <string name="third_page">To delete an item swipe left and to cancel it swipe right. Also don\'t forget to check the task when it\'s done!</string>
+    <string name="forth_page">Clicking on an item in daily task list will take you to its details page where you can also edit it, and holding on it will allow you to move its position in the list.</string>
+    <string name="fifth_page">While in the week tab you can scroll through weeks and check daily tasks and events. While in the month tab you can see that month\'s events</string>
+    <string name="sixth_page">In Progress you can monitor your efficiency and productivity during a desired period</string>
+    <string name="seventh_page">You can change  the theme, language and set daily productivity reminders</string>
+
+    <string name="end_of_tutorial">Lets start planning!</string>
+
+
+
+    <string name="cancel">Cancel</string>
+
+    <!--Daily Reminder-->
+
+    <string name="notification_header">Daily Reminder</string>
+    <string name="notification_description">Did you do all of your tasks?</string>
+
+    <string name="alarm_disabled">ALARM DISABLED!</string>
+    <string name="alarm_enabled">ALARM ENABLED!</string>
+
+
+
+
+
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="green">#FF079A0D</color>
+
+    <color name="grey">#FFBDBDBD</color>
+    <color name="red">#d32f2f</color>
+
+    <color name="active">#EC5656</color>
+    <color name="done">#47B39C</color>
+    <color name="canceled">#FFC154</color>
+
+    <!--Dark MODE-->
+
+    <color name="primaryColorDarkMode">#000000</color>
+    <color name="primaryLightColorDarkMode">#2c2c2c</color>
+    <color name="primaryDarkColorDarkMode">#000000</color>
+    <color name="secondaryColorDarkMode">#cb997e</color>
+    <color name="secondaryLightColorDarkMode">#ffcaad</color>
+    <color name="secondaryDarkColorDarkMode">#996b52</color>
+    <color name="primaryTextColorDarkMode">#ffffff</color>
+    <color name="secondaryTextColorDarkMode">#000000</color>
+
+
+
+    <!--THEME 1-->
+
+    <color name="primaryColorTheme1">#e57373</color>
+    <color name="primaryLightColorTheme1">#ffa4a2</color>
+    <color name="primaryDarkColorTheme1">#af4448</color>
+
+    <color name="secondaryColorTheme1">#ffcdd2</color>
+    <color name="secondaryLightColorTheme1">#ffffff</color>
+    <color name="secondaryDarkColorTheme1">#cb9ca1</color>
+
+    <color name="primaryTextColorTheme1">#000000</color>
+    <color name="secondaryTextColorTheme1">#000000</color>
+
+
+
+
+    <!--THEME 2-->
+
+    <color name="primaryColorTheme2">#0d47a1</color>
+    <color name="primaryLightColorTheme2">#5472d3</color>
+    <color name="primaryDarkColorTheme2">#002171</color>
+
+    <color name="secondaryColorTheme2">#ff6f00</color>
+    <color name="secondaryLightColorTheme2">#ffa040</color>
+    <color name="secondaryDarkColorTheme2">#c43e00</color>
+
+    <color name="primaryTextColorTheme2">#ffffff</color>
+    <color name="secondaryTextColorTheme2">#000000</color>
+
+    <!--THEME 3-->
+
+    <color name="primaryColorTheme3">#fdd835</color>
+    <color name="primaryLightColorTheme3">#ffff6b</color>
+    <color name="primaryDarkColorTheme3">#c6a700</color>
+
+    <color name="secondaryColorTheme3">#ba68c8</color>
+    <color name="secondaryLightColorTheme3">#ee98fb</color>
+    <color name="secondaryDarkColorTheme3">#883997</color>
+
+    <color name="primaryTextColorTheme3">#000000</color>
+    <color name="secondaryTextColorTheme3">#000000</color>
+
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/white</color>
+
+</resources>
+
+
+    <!--
+
+    <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="green">#FF079A0D</color>
+
+    <color name="beige">#E1C699</color>
+    <color name="beige_700">#CFB383</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="grey_400">#FFBDBDBD</color>
+    <color name="grey_600">#FF757575</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_80">#37474F</color>
+
+    <color name="pink_80">#cb997e</color>
+    <color name="pink_50">#DDBEA9</color>
+    <color name="pink_20">#FFE8D6</color>
+    <color name="grey_21">#B7B7A4</color>
+    <color name="grey_51">#A5A58D</color>
+    <color name="grey_81">#6B705C</color>
+
+    &lt;!&ndash;MY TEST COLORS&ndash;&gt;
+
+    <color name="red">#d32f2f</color>
+    <color name="red_light">#ff6659</color>
+    <color name="red_dark">#9a0007</color>
+
+    <color name="brown">#795548</color>
+    <color name="brown_light">#a98274</color>
+    <color name="brown_dark">#4b2c20</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+
+
+    &lt;!&ndash;MY TEST COLORS NUMBER 2&ndash;&gt;
+
+    <color name="colorPrimary">#9a0007</color>
+    <color name="colorPrimaryLight">#d24330</color>
+    <color name="colorPrimaryDark">#650000</color>
+
+
+
+    <color name="colorSecondary">#cb997e</color>
+    <color name="colorSecondaryLight">#ffcaad</color>
+    <color name="colorSecondaryDark">#996b52</color>
+
+    <color name="primaryColorDarkMode">#000000</color>
+    <color name="primaryLightColorDarkMode">#2c2c2c</color>
+    <color name="primaryDarkColorDarkMode">#000000</color>
+    <color name="secondaryColorDarkMode">#cb997e</color>
+    <color name="secondaryLightColorDarkMode">#ffcaad</color>
+    <color name="secondaryDarkColorDarkMode">#996b52</color>
+    <color name="primaryTextColorDarkMode">#ffffff</color>
+    <color name="secondaryTextColorDarkMode">#000000</color>
+
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/white</color>
+
+
+    <color name="colorPrimaryTheme3">#fdd835</color>
+    <color name="colorPrimaryLightTheme3">#ffff6b</color>
+    <color name="colorPrimaryDarkTheme3">#c6a700</color>
+    <color name="colorOnPrimaryTheme3">#000000</color>
+
+
+
+    <color name="colorSecondaryTheme3">#212121</color>
+    <color name="colorSecondaryLightTheme3">#484848</color>
+    <color name="colorSecondaryDarkTheme3">#000000</color>
+    <color name="colorOnSecondaryTheme3">#ffffff</color>
+
+
+
+    </resources>-->
